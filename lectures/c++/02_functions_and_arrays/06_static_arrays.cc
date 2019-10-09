@@ -1,7 +1,8 @@
 #include <iostream>
 
 void surprise(double a[], const std::size_t n) {
-  for (auto i = 0llu; i < n; ++i) {
+  for (auto i = 0llu ; i < n; ++i) // long long unsigned
+ {
     a[i] = 77;
   }
 }
