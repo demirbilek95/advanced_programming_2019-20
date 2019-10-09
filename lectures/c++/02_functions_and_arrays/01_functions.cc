@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-unsigned int factorial(unsigned int n) {
+auto unsigned int factorial(unsigned int n) {
   unsigned int ret{1};
   while (n > 1) {
     ret *= n;
