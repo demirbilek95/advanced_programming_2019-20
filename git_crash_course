@@ -1,0 +1,81 @@
+-- git is a version control system
+
+working dir 		staging are		repository.git
+
+git add				git commit
+------------------------>		------------->	
+git add									
+----------------------------------------------------------------------->git commit
+					git checkout
+				<------------------
+									
+				<-----------------------------------------						
+					"modify"		git add
+				------------------> ---------------------->	
+	git checkout
+<---------------------------------------------------------------------------			
+
+git merge
+<---------------------------------------------------------------------------	
+
+
+
+
+
+
+funtracked file		unmodified 		modified 		staged
+
+
+
+
+
+
+
+
+ls -a --> hidden files
+
+
+git status
+git add
+git rm is for removing files
+git commit -m "Commit message"
+git checkout (changing workin directory)
+git log --oneline --graph --all --decorate
+git mv mars.txt Mars.txt
+
+	
+	HEAD is a pointer,
+
+ 
+rm * .vtu -linux command for delete
+
+
+https --> username, pass
+ssh -- > 
+
+git clone github adress
+git fetch origin --> download what has been changed, but it is upload to your directory. 
+git merge origin/master
+##git pull -origin master
+
+
+Click fork it
+
+git remote add myfork and the fork adress
+
+git remote -v
+git push myfork master
+
+git branch moon
+
+git branch jupiter master
+
+after commits git merge moon
+
+git branch -d moon
+
+man git-commit
+
+pro git for resource
+
+
