@@ -1,6 +1,6 @@
 #include <iostream>
 
-template <typename T>
+template <typename T> // you can provide class name for typename
 T dwim(const T a, const T b);
 
 int main() {
