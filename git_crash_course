@@ -54,7 +54,7 @@ https --> username, pass
 ssh -- > 
 
 git clone github adress
-git fetch origin --> download what has been changed, but it is upload to your directory. 
+git fetch origin --> download what has been changed, but t is upload to your directory. 
 git merge origin/master
 ##git pull -origin master
 

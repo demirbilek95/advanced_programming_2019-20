@@ -18,6 +18,9 @@
 
 - Use `std::size_t`.
 
+// delete should be used for preventing leak memory
+// std:size_t yerine unsigned int kullanılabilir
+
   ​
 
 *Hints*: 
@@ -25,7 +28,7 @@
 - If you have to pass an array to a function, pass the pointer to its first element and the size of the array.
 
 
-- Remember to check your code with `valgrind`. If you  have a MAC you might have bad surprises. Run `valgrind` on a **Linux**  system. Alternatively, compile your code with the flags
+- Remember to check your code with `valgrind`. If you  have a MAC you might have bad surprises. Run `valgrind` on a **Linux**  system (in use at exit: 0 bytes in 0 block görünmeli)). Alternatively, compile your code with the flags
 
   `-g -fsanitize=address`  and then run your executable.
 

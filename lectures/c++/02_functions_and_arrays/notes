@@ -1,0 +1,27 @@
+ret_type function_name(int a,
+			double b){
+
+	function body
+
+	return 
+}
+
+*if the function doesn't return anything we can write void instead of ret_type
+
+auto f6 = factorial(6) -- compiler will decide type of return (it does what functions retrurn)
+
+auto --> function is valid for c++14
+
+}
+pointers, reference
+
+#include <iostream>
+
+int main()
+{
+	int a{5};
+	int* p{&a};
+	int& r{a};  // int * x = &a
+
+			// r --> (*x)
+}
