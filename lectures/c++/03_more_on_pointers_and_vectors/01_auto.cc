@@ -17,6 +17,9 @@ T* init(const std::size_t l) {
 
 #endif
 
+template <typename T>
+void debug(T);
+
 int main() {
   auto b = true;          // a bool
   auto ch = 'x';          // a char
@@ -29,7 +32,11 @@ int main() {
   for (auto i = 0; i < 7; ++i)
     std::cout << i << std::endl;
 
-  auto pb = &b;  // guess what.. How can I know?
+  auto pb = &b;  // guess what.. How can I know? //pointer to boolean
+
+  std::cout << pb << std::endl;
+
+  //debug(pb);
 
   auto ps = init<double>(11);
   delete[] ps;

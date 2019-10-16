@@ -20,7 +20,7 @@ int main() {
   print_vector(v1, "v1 after copy");
 
   for (auto x : {7, 8, 9})
-    v1.push_back(x);
+    v1.push_back(x); // 7,8,9 v1'in ardına ekleniyor python'daki .append gibi
 
   print_vector(v1, "v1 after push_back");
 

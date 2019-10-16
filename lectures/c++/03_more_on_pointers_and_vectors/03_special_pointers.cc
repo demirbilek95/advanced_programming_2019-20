@@ -1,4 +1,4 @@
-#include <cstring>  // strcmp
+ #include <cstring>  // strcmp
 #include <iostream>
 
 int func1(const char* a);
@@ -9,20 +9,25 @@ int main() {
   int a{8};
   int* pi{&a};
 
-  char** ppc;
+  char** ppc;  // pointer to pointer to char
 
-  int* ap[7];
+  int* ap[7]; //array which elemetns are pointer to integer
 
   void* pv{pi};
   // *pv; // we cannot dereference void*
   // ++pv; // we cannot increment. Why?
-  int* pi2{static_cast<int*>(pv)};
+  int* pi2{static_cast<int*>(pv)}; //cast performing compile timing, 
+
+//double * a = malloc(sizeof(double)*N) get an compiler erro for c++, valif for c
+//double * a = (double *) malloca(sizeof(double)*N)
+//double * a = static_cast<double *>(double *) malloca(sizeof(double)*N)
+
 
   pv = ppc;
   pv = ap;
   pv = pi;
 
-  pi = nullptr;
+  pi = nullptr; //use nullptr always for c++11
   ppc = nullptr;
   // ap = nullptr;  // error, why?
   ap[0] = nullptr;
@@ -62,7 +67,7 @@ int main() {
   else
     std::cout << "different\n";
 
-  int (*fp)(const char*);
+  int (*fp)(const char*); // pointer to function
   fp = func1;
 
   fp("hello");
@@ -85,7 +90,7 @@ int func1(const char* a) {
   std::cout << "1111: " << a << std::endl;
   return 1;
 }
-
+	
 int func2(const char* a) {
   std::cout << "2222: " << a << std::endl;
   return 2;

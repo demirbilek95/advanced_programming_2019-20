@@ -9,7 +9,7 @@ int main() {
   std::array<int, 4> b{a};  // I can copy element-wise from another std::array
                             // this is not possible with plain built-in arrays
   b = a;
-  for (auto x : a)
+  for (auto x : a) // for auto c in array a, it can be used for iterating over elemetns of a
     std::cout << x << " ";
   std::cout << std::endl;
 
