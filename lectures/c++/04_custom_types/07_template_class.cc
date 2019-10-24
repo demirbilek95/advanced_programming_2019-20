@@ -9,7 +9,9 @@ class Vector {
  public:
   Vector(const std::size_t size) : elem{new num[size]}, _size{size} {}
 
-  // automatically release the acquired memory
+ //RAII Resource Acquisition IS Initialization
+
+ // automatically release the acquired memory
   ~Vector() { delete[] elem; }
 
   // try to remove the const and recompile

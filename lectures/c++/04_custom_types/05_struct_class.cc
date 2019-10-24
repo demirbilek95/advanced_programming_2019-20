@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-struct Point_s {
+struct Point_s { //struct means class in c++, it can be put inside of structs data and functions
   double x;
   double y;
   void print();
@@ -12,7 +12,7 @@ void Point_s::print() {
   std::cout << "Structure. x = " << x << "; y = " << y << std::endl;
 }
 
-class Point_c {
+class Point_c {  // in struct everything is public, in class default visibility is private this is the only difference between class and struct
   double x;
   double y;
 
@@ -30,14 +30,14 @@ int main() {
   ps.print();
 
   Point_c pc;
-  // pc.x =7.6; // error
+  // pc.x =7.6; // error ---> **because it is private**
   pc.print();  // I can access private data through public functions
 
-  Point_s* p = &ps;
-  p->x = 0.0;
+  Point_s* p = &ps;  // pointer the class
+  p->x = 0.0; // -> is just the syntax
   p->print();
 
-  auto& pr = ps;
+  auto& pr = ps;   //
   ++pr.x;
   pr.print();
 

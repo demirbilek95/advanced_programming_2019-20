@@ -16,7 +16,7 @@ struct Foo {
 
 Foo::Foo(const int i, const double d, const std::string& s)
     : _i{i},
-      _d{d},
+      _d{d}, // in this region () can be used 
       _s{s}
 // _i, _d, _s must be initialized in the same order they have been declared
 
@@ -45,7 +45,7 @@ std::ostream& operator<<(std::ostream& os, const Foo& f) {
 int main() {
   Foo f0;    // call default ctor
   Foo f1{};  // call default ctor
-  // Foo f2(); // compiler error
+  // Foo f2(); // compiler error  --> compiler thinks we are trying to define a fuctions
 
   Foo f2{8, 2.2, "hello"};
   std::cout << "f0: " << f0 << "f1: " << f1 << "f2: " << f2 << std::endl;
@@ -53,3 +53,6 @@ int main() {
   // the destructor is called when the variable goes out of scope
   return 0;
 }
+
+
+//constructors top to bottom, dtor bottom to top
