@@ -1,3 +1,5 @@
+//there is no macro overloading
+
 #ifndef __AP_ERROR_H__
 #define __AP_ERROR_H__
 

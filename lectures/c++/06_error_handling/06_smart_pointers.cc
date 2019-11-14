@@ -1,5 +1,5 @@
 #include <iostream>
-#include <memory>  // std::uniqe_ptr
+#include <memory>  // std::uniqe_ptr    //smart pointerlar iki tane unique pointer'ı gördük. Diğeri shared pointer
 
 #include "ap_error.h"
 
@@ -12,7 +12,7 @@ class Vector {
   }
   double& operator[](const unsigned int i) noexcept {
     return elem[i];
-  }  // you can use smart pointers almost like raw pointers
+  }  // you can use smart pointers almost like raw pointers	
   ~Vector() noexcept { std::cout << "~Vector\n"; }
 };
 

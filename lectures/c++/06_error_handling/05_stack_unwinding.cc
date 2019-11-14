@@ -37,7 +37,7 @@ class ManyResources {
     std::cout << "Manyresources" << std::endl;
     try {
       ptr = new double[5];  // new(std::nothrow) double[5] could be better
-      AP_ERROR(false) << "Error in ManyResources ctor." << std::endl;
+      AP_ERROR(false) << "Error in ManyResources ctor." << std::endl;   //ramde yer biterse new kullanıldığı için (heap) exeption fırlatılıyor
     } catch (...) {
       delete[] ptr;  // <----
       throw;
@@ -52,7 +52,7 @@ class ManyResources {
 
 int main() {
   Foo f;
-  int* raw_ptr = new int[7];
+  int* raw_ptr = new int[7];  // pointerları try'ın içinde bırak, do not use null pointers to have clean code, solution is smart pointers
   try {
     // int * raw_ptr=new int[7]; // wrong because raw_ptr would not be visible
     // inside the catch-clause

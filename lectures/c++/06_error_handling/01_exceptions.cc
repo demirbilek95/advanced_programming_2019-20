@@ -11,7 +11,7 @@ struct Negative_number {};
 struct Bigger_than_expected {};
 
 int main() {
-  try {
+  try {						
     std::cout << "please insert a number\n";
     double number;
     std::cin >> number;
