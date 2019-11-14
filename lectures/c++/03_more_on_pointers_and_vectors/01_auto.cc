@@ -32,7 +32,7 @@ int main() {
   for (auto i = 0; i < 7; ++i)
     std::cout << i << std::endl;
 
-  auto pb = &b;  // guess what.. How can I know? //pointer to boolean
+  auto pb = &b;  // guess what.. How can I know? //reference to boolean
 
   std::cout << pb << std::endl;
 
