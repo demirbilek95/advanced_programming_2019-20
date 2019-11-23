@@ -10,8 +10,8 @@ int main() {
 void get_double() {
 	double i;
 	std::cout << "Enter an double number\n";
-	std::cin >> i;
-	while(1){
+	//std::cin >> i;
+	while(!(std::cin >> i)){
 		if(std::cin.fail()){
 			std::cin.clear();
 			std::cin.ignore();

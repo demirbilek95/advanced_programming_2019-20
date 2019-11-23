@@ -10,8 +10,7 @@ int main() {
 void get_int() {
 	int i;
 	std::cout << "Enter an integer number\n";
-	std::cin >> i;
-	while(1){
+	while(!(std::cin >> i)){
 		if(std::cin.fail()){
 			std::cin.clear();
 			std::cin.ignore();
