@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Exercises - session 04
 
 ## Class Date
