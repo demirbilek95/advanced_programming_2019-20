@@ -2,7 +2,7 @@
 
 struct Base {
   Base() { std::cout << "Base\n"; }
-  ~Base() { std::cout << "~Base\n"; }
+  virtual ~Base() { std::cout << "~Base\n"; }
 };
 
 struct Derived : public Base {
@@ -19,3 +19,5 @@ int main() {
 
   return 0;
 }
+
+//first construct then destructer later, polymorphisism works with pointers and reference

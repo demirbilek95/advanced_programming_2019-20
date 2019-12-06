@@ -11,7 +11,7 @@ struct Animal {
 
   Animal() : Animal{0, 0} {}  // delegating constructor
 
-  virtual void speak() const = 0;  // pure virtual function ==> abstract class
+  virtual void speak() const = 0;  // pure virtual function ==> abstract class              
   virtual void info() const noexcept {
     std::cout << "age:\t" << age << '\n' << "weight:\t" << weight << '\n';
   }
@@ -37,7 +37,7 @@ struct Snake : public Animal {
   void speak() const noexcept override { std::cout << "ssss\n"; }
 };
 
-void print_animal(const Animal& a) noexcept {
+void print_animal(const Animal& a) noexcept {   // thanks to virtual keyword, this functions will work "properly" this is called polymorphisim, "noexcept", "override" (compiler will double check) is after c++11  // In summary virtual is for the parent, override is for the children. 
   std::cout << "throught ref\n";
   a.info();
   a.speak();

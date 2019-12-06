@@ -7,10 +7,12 @@ struct Base {
 
 template <typename T>
 struct Derived : public Base<T> {
-  void bar() const { this->foo(); }
+  void bar() const {this->foo(); } //this is a pointer to itself
 };
 
 int main() {
   Derived<int> d;
   d.bar();
 }
+
+

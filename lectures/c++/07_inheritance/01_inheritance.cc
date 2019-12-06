@@ -44,7 +44,7 @@ void print_animal(const Animal& a) noexcept {
 
 // compile-time (static) polymorphism
 template <class T>
-void print_animal_template(const T& a) noexcept {
+void print_animal_template(const T& a) noexcept {  //reference to the base class, 
   std::cout << "through template\n";
   a.info();
   a.speak();
